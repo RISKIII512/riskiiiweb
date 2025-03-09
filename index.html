@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>riskiweb</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="riskii.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css"> <!-- Linking the external CSS file -->
 </head>
-<body>
 
-    <img src="riskii.jpg" alt="Logo" style="width: 100px; height: 100px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+<body>
+    <!-- Full screen black loading screen -->
+    <div id="loading-screen" class="loading">
+        <div class="loading-card">
+            <div class="loading-progress">sabar ya,lagii loading 😁</div>
+        </div>
+    </div>
 
     <header>
-     <h1>WEB RISKIII</h1>
-     <p1>media sosial ada di bawah</p1>
+        <div class="container">
+              <img src="riskii.jpg" alt="Logo" style="width: 100px; height: 100px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+
+            <h1>WEB RISKIII</h1>
+            <p class="mb-4">
+                <span>Media sosial ada di bawah</span>
+            </p>
+        </div>
     </header>
 
-    <img src="wa.png" alt="WHATSAPP" style="width: 30px; height: 30px; border-radius: 15%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="ig.png" alt="WHATSAPP" style="width: 30px; height: 30px; border-radius: 15%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="Yt.webp" alt="WHATSAPP" style="width: 30px; height: 30px; border-radius: 15%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="github.png" alt="GITHUB" style="width: 30px; height: 30px; border-radius: 15%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    
+    <div class="flex space-x-4 mb-6">
+        <a class="text-green-500" href="https://wa.me/6285340693226/">
+            <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+        <a class="text-pink-500" href="https://www.instagram.com/muhriskizq?igsh=dGQxeTF4bGZzc2Rn">
+            <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a class="text-red-500" href="https://www.youtube.com/@RINZPIW">
+            <i class="fab fa-youtube fa-2x"></i>
+        </a>
+        <a class="text-black" href="https://github.com/RISKIII512">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </div>
+
     <div class="kotak-putih">
         <a href="https://wa.me/6285340693226" class="styled-link">LINK WHATSAPP</a>
     </div>
 
     <div class="kotak-putih">
-        <a href="www.instagram.com/muhriskizq/" class="styled-link">LINK INSTAGRAM</a>
+        <a href="https://www.instagram.com/muhriskizq?igsh=dGQxeTF4bGZzc2Rn" class="styled-link">LINK INSTAGRAM</a>
     </div>
 
     <div class="kotak-putih">
@@ -35,3 +59,16 @@
     <div class="kotak-putih">
         <a href="https://github.com/RISKIII512" class="styled-link">LINK GITHUB</a>
     </div>
+
+    <p class="mt-6">Masih dalam proses perbaikan</p>
+    <p class="mt-2">© Created by Riski</p>
+
+    <script>
+        // Wait for 10 seconds, then hide the loading screen
+        setTimeout(function () {
+            document.getElementById('loading-screen').style.display = 'none';
+        }, 10000); // 10000 milliseconds = 10 seconds
+    </script>
+</body>
+
+</html>

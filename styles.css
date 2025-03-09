@@ -1,33 +1,136 @@
-header {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ecf0f1;
+* {
+    padding: 0;
 }
 
 body {
-  background-image: url(riski.jpg);
-  text-align: center;
+    background: linear-gradient(45deg, #8d0000, #44006b, #270164, #006400);
+    background-attachment: fixed;
+    background-size: 500%;
+    animation: backgroundAnimation 4s infinite ease;
+    text-align: center;
     background-color: paleturquoise;
     color: white;
     font-family: Arial, sans-serif;
 }
 
+@keyframes backgroundAnimation {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ecf0f1;
+}
+
+.welcome-container {
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #444;
+    /* Warna latar belakang progress bar */
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 10px;
+    background-color: #00bcd4;
+    /* Warna progress */
+    border-radius: 5px;
+}
+
 .kotak-putih {
-  width: 300px;
-  height: 50px;
-  margin: 10px auto;
-  padding: 5px;
-  border: 5px solid white;
-  box-sizing: border-box;
-  text-align: center; 
-  transition: background-color 0.3s;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: white;
+    width: 300px;
+    height: 50px;
+    margin: 10px auto;
+    padding: 5px;
+    border: 5px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3;
 }
 
 a {
-text-decoration: none;
-color: blue;
-animation: shake 0.5s ease
+    text-decoration: none;
+    color: blue;
+    animation: shake 0.5s ease;
+}
+
+.kotak-putih:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.styled-link {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: red;
+}
+
+.styled-link:hover {
+    color: blue;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of everything */
+}
+
+.loading-card {
+    width: 200px;
+    height: 28px;
+    padding: 1px;
+    border: 2px solid red;
+    border-radius: 4px;
+    overflow: hidden; /* Ensure the progress bar stays within the border */
+    position: relative;
+}
+
+.loading-progress {
+    width: 0%; /* Start with 0% width */
+    height: 100%;
+    background-color: red;
+    animation: loading 10s ease-in-out infinite; /* Change the duration to 5 seconds */
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
